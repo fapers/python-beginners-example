@@ -8,7 +8,9 @@ pin = int(input("Entre com seu pin: "))
 def find_in_file(f):
     myfile = open('.\sample.txt')
     fruits = myfile.read()
+    myfile.close()
     fruits = fruits.splitlines()
+    print(fruits)
     if f in fruits:
         return "Esta fruta está na lista."
     else:
